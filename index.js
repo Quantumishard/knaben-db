@@ -44,7 +44,7 @@ const toStream = async (parsed, uri, tor, type, s, e) => {
 
         setTimeout(() => {
           resolve([]);
-        }, 5000); // Timeout if the server is too slow
+        }, 7000); // Timeout if the server is too slow
       });
 
       parsed.files = res;
@@ -170,11 +170,11 @@ const streamFromMagnet = (tor, uri, type, s, e) => {
 let stream_results = [];
 let torrent_results = [];
 
-const host = "http:/129.153.72.60:9117";
-const apiKey = "k7lsbawbs4aq8t1s56c58jm091gm7mk7";
+const host = "http://100.12.26.164:9117";
+const apiKey = "b3f8f3fb4rtt4vcsml7cz82dtkjbj3df";
 
 let fetchTorrent = async (query) => {
-  let url = `${host}/api/v2.0/indexers/all/results?apikey=${apiKey}&Query=${query}&Category[]=2000&Category[]=5000&Category[]=8000&Category[]=100001&Category[]=100002&Category[]=100003&Tracker[]=filelisting&Tracker[]=bitsearch`;
+  let url = `${host}/api/v2.0/indexers/all/results?apikey=${apiKey}&Query=${query}&Category[]=2000&Category[]=5000&Category[]=8000&Category[]=100001&Category[]=100002&Category[]=100003&Tracker[]=bitsearch`;
 
   try {
     const response = await fetch(url, {
