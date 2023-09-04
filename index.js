@@ -34,7 +34,7 @@ const toStream = async (parsed, uri, tor, type, s, e) => {
   if (!parsed.files && uri.startsWith("magnet")) {
     try {
       const engine = torrentStream("magnet:" + uri, {
-        connections: 5, // Limit the number of connections/streams
+        connections: 7, // Limit the number of connections/streams
       });
 
       const res = await new Promise((resolve, reject) => {
@@ -44,7 +44,7 @@ const toStream = async (parsed, uri, tor, type, s, e) => {
 
         setTimeout(() => {
           resolve([]);
-        }, 7000); // Timeout if the server is too slow
+        }, 5000); // Timeout if the server is too slow
       });
 
       parsed.files = res;
@@ -174,7 +174,7 @@ const host = "http://100.12.26.164:9117";
 const apiKey = "b3f8f3fb4rtt4vcsml7cz82dtkjbj3df";
 
 let fetchTorrent = async (query) => {
-  let url = `${host}/api/v2.0/indexers/all/results?apikey=${apiKey}&Query=${query}&Category[]=2000&Category[]=5000&Category[]=8000&Category[]=100001&Category[]=100002&Category[]=100003&Tracker[]=bitsearch`;
+  let url = `${host}/api/v2.0/indexers/all/results?apikey=${apiKey}&Query=${query}&Category[]=2000&Category[]=5000&Tracker[]=bitsearch`;
 
   try {
     const response = await fetch(url, {
