@@ -232,7 +232,7 @@ const fetchTorrentFromHost1 = async (query) => {
         "accept-language": "en-US,en;q=0.9",
         "x-requested-with": "XMLHttpRequest",
         cookie:
-          "Jackett=CfDJ8AG_XUDhxS5AsRKz0FldsDJIHUJANrfynyi54VzmYuhr5Ha5Uaww2hSQytMR8fFWjPvDH2lKCzaQhRYI9RuK613PZxJWz2tgHqg1wUAcPTMfi8b_8rm1Igw1-sZB_MnimHHK7ZSP7HfkWicMDaJ4bFGZwUf0xJOwcgjrwcUcFzzsVSTALt97-ibhc7PUn97v5AICX2_jsd6khO8TZosaPFt0cXNgNofimAkr5l6yMUjShg7R3TpVtJ1KxD8_0_OyBjR1mwtcxofJam2aZeFqVRxluD5hnzdyxOWrMRLSGzMPMKiaPXNCsxWy_yQhZhE66U_bVFadrsEeQqqaWb3LIFA",
+          "Jackett=CfDJ8JGMKzAOIg1GpbGxjar2TujvQ1tVmIta0XThcBG4V_j32mQnx6z3GDTiqYsDLv0jLvfan6JOfx_Mr61hId8KLu389GzmDM6RDqq6yN7K3-ucA7FSricYvgWGmNnVq5xL7cdQfNVIvv78fhRG0Z7lw_Yjz47ZPY9ChVi2ppvE9NFr8dMUg_-fto8XEFEy29ZI6bsxX4KWYoEP-S_zUhhymLf54VJSQKCAvo7d0ZLzWh9p_08kEGaGxyTA8tZYhbolyjKEBoGno80BawzJq2jog8ThKhmtN45rAQdb1CrOkT9dl0S8e0M0_ivZJj-_YeLWOtRn9ygYhiAFhZkIRTJXXbw",
       },
       referrerPolicy: "no-referrer",
       method: "GET",
@@ -277,7 +277,7 @@ const fetchTorrentFromHost1 = async (query) => {
         "accept-language": "en-US,en;q=0.9",
         "x-requested-with": "XMLHttpRequest",
         cookie:
-          "Jackett=CfDJ8AG_XUDhxS5AsRKz0FldsDJIHUJANrfynyi54VzmYuhr5Ha5Uaww2hSQytMR8fFWjPvDH2lKCzaQhRYI9RuK613PZxJWz2tgHqg1wUAcPTMfi8b_8rm1Igw1-sZB_MnimHHK7ZSP7HfkWicMDaJ4bFGZwUf0xJOwcgjrwcUcFzzsVSTALt97-ibhc7PUn97v5AICX2_jsd6khO8TZosaPFt0cXNgNofimAkr5l6yMUjShg7R3TpVtJ1KxD8_0_OyBjR1mwtcxofJam2aZeFqVRxluD5hnzdyxOWrMRLSGzMPMKiaPXNCsxWy_yQhZhE66U_bVFadrsEeQqqaWb3LIFA",
+          "Jackett=CfDJ8JGMKzAOIg1GpbGxjar2TujvQ1tVmIta0XThcBG4V_j32mQnx6z3GDTiqYsDLv0jLvfan6JOfx_Mr61hId8KLu389GzmDM6RDqq6yN7K3-ucA7FSricYvgWGmNnVq5xL7cdQfNVIvv78fhRG0Z7lw_Yjz47ZPY9ChVi2ppvE9NFr8dMUg_-fto8XEFEy29ZI6bsxX4KWYoEP-S_zUhhymLf54VJSQKCAvo7d0ZLzWh9p_08kEGaGxyTA8tZYhbolyjKEBoGno80BawzJq2jog8ThKhmtN45rAQdb1CrOkT9dl0S8e0M0_ivZJj-_YeLWOtRn9ygYhiAFhZkIRTJXXbw",
       },
       referrerPolicy: "no-referrer",
       method: "GET",
@@ -327,11 +327,11 @@ function getMeta(id, type) {
 
 app.get("/manifest.json", (req, res) => {
   const manifest = {
-    id: "mikmc.od.org+++",
-    version: "3.0.0",
-    name: "2HYJackett",
+    id: "mikmc.od.org",
+    version: "1.0.1",
+    name: "Bitsearch",
     description: "Movie & TV Streams from Jackett",
-    logo: "https://raw.githubusercontent.com/mikmc55/hyackett/main/hyjackett.jpg",
+    logo: "https://bitsearch.to/bitsearch-logo.svg",
     resources: ["stream"],
     types: ["movie", "series"],
     idPrefixes: ["tt"],
