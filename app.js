@@ -223,7 +223,7 @@ const host2 = {
 
 const fetchTorrentFromHost1 = async (query) => {
   const { hostUrl, apiKey } = host1;
-  const url = `${hostUrl}/api/v2.0/indexers/all/results?apikey=${apiKey}&Query=${query}&Category[]=2000&Category[]=5000&&Tracker[]=bitsearch`;
+  const url = `${hostUrl}/api/v2.0/indexers/all/results?apikey=${apiKey}&Query=${query}&Category[]=2000&Category[]=5000&&Tracker[]=bitseach`;
 
   try {
     const response = await fetch(url, {
@@ -268,7 +268,7 @@ const fetchTorrentFromHost1 = async (query) => {
 
   const fetchTorrentFromHost2 = async (query) => {
   const { hostUrl, apiKey } = host2;
-  const url = `${hostUrl}/api/v2.0/indexers/all/results?apikey=${apiKey}&Query=${query}&Category[]=2000&Category[]=5000&Category[]=8000&Tracker[]=bitsearch`;
+  const url = `${hostUrl}/api/v2.0/indexers/all/results?apikey=${apiKey}&Query=${query}&Category%5B%5D=2000&Category%5B%5D=2010&Category%5B%5D=2020&Category%5B%5D=2030&Category%5B%5D=2040&Category%5B%5D=2045&Category%5B%5D=2070&Category%5B%5D=5000&Category%5B%5D=5020&Category%5B%5D=5030&Category%5B%5D=5040&Category%5B%5D=5045&Category%5B%5D=5050&Category%5B%5D=5060&Category%5B%5D=5070&Category%5B%5D=5080&Category%5B%5D=2100000&Category%5B%5D=2101000&Category%5B%5D=2102000&Category%5B%5D=2103000&Category%5B%5D=2104000&Category%5B%5D=2105000&Category%5B%5D=2107000&Category%5B%5D=2108000&Category%5B%5D=3100000&Category%5B%5D=3101000&Category%5B%5D=3102000&Category%5B%5D=3103000&Category%5B%5D=3104000&Category%5B%5D=3105000&Category%5B%5D=3108000&Tracker%5B%5D=knaben`;
 
   try {
     const response = await fetch(url, {
