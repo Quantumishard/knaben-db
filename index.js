@@ -233,7 +233,7 @@ function getMeta(id, type) {
 
 app.get("/manifest.json", (req, res) => {
   const manifest = {
-    id: "hy.od.org",
+    id: "bs.torr.org",
     version: "1.0.1",
     name: "Bitsearch",
     description: "Movie & TV Torrents",
