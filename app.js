@@ -6,7 +6,7 @@ const torrentStream = require("torrent-stream");
 const bodyParser = require("body-parser");
 const pLimit = require('p-limit');
 const http = require("http");
-const limit = pLimit(10);
+const limit = pLimit(5);
 
 function getSize(size) {
   const gb = 1024 * 1024 * 1024;
@@ -36,7 +36,7 @@ const toStream = async (parsed, uri, tor, type, s, e) => {
 if (!parsed.files && uri.startsWith("magnet")) {
   try {
     const engine = torrentStream("magnet:" + uri, {
-      connections: 7, // Limit the number of connections/streams
+      connections: 3, // Limit the number of connections/streams
     });
 
     const res = await new Promise((resolve, reject) => {
@@ -223,7 +223,7 @@ const host2 = {
 
 const fetchTorrentFromHost1 = async (query) => {
   const { hostUrl, apiKey } = host1;
-  const url = `${hostUrl}/api/v2.0/indexers/all/results?apikey=${apiKey}&Query=${query}&Category[]=2000&Category[]=5000&Category[]=8000&Category[]=10001&Category[]=10002&Category[]=10003&Tracker[]=filelistting`;
+  const url = `${hostUrl}/api/v2.0/indexers/all/results?apikey=${apiKey}&Query=${query}&Category[]=2000&Category[]=5000&Category[]=8000&Category[]=10001&Category[]=10002&Category[]=10003&Tracker[]=filelistting&Tracker[]=bitsearch`;
 
   try {
     const response = await fetch(url, {
