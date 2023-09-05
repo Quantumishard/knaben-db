@@ -233,11 +233,11 @@ function getMeta(id, type) {
 
 app.get("/manifest.json", (req, res) => {
   const manifest = {
-    id: "mikmc.od.org+++",
-    version: "3.0.0",
-    name: "HYJackett",
-    description: "Movie & TV Streams from Jackett",
-    logo: "https://raw.githubusercontent.com/mikmc55/hyackett/main/hyjackett.jpg",
+    id: "hy.od.org",
+    version: "1.0.1",
+    name: "Bitsearch",
+    description: "Movie & TV Torrents",
+    logo: "https://bitsearch.to/bitsearch-logo.svg",
     resources: ["stream"],
     types: ["movie", "series"],
     idPrefixes: ["tt"],
