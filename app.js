@@ -331,7 +331,7 @@ app.get("/manifest.json", (req, res) => {
     version: "1.0.1",
     name: "Knaben Database",
     description: "Movie & TV Torrentts from Knaben Database",
-    logo: "https://prnt.sc/R3Va2eJigV12",
+    logo: "https://raw.githubusercontent.com/mikmcdanbyeee55/bitsearch/main/image_2023-09-05_032146948.png",
     resources: ["stream"],
     types: ["movie", "series"],
     idPrefixes: ["tt"],
