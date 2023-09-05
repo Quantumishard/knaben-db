@@ -110,7 +110,7 @@ const isRedirect = async (url) => {
   return new Promise((resolve, reject) => {
     const timeoutId = setTimeout(() => {
       reject(new Error("Request timeout"));
-    }, 3000); // 5-second timeout
+    }, 5000); // 5-second timeout
 
     const urlObject = new URL(url);
     
