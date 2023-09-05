@@ -327,11 +327,11 @@ function getMeta(id, type) {
 
 app.get("/manifest.json", (req, res) => {
   const manifest = {
-    id: "kn.torr.org",
+    id: "hy.torr.org",
     version: "1.0.1",
-    name: "Knaben Database",
-    description: "Movie & TV Torrents from Knaben Database",
-    logo: "https://raw.githubusercontent.com/mikmcdanbyeee55/bitsearch/main/image_2023-09-05_032146948.png",
+    name: "HYJackett",
+    description: "Movie & TV Torrents from Jackett",
+    logo: "https://raw.githubusercontent.com/mikmc55/hyackett/main/hyjackett.jpg",
     resources: ["stream"],
     types: ["movie", "series"],
     idPrefixes: ["tt"],
