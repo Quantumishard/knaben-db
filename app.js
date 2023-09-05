@@ -36,7 +36,7 @@ const toStream = async (parsed, uri, tor, type, s, e) => {
 if (!parsed.files && uri.startsWith("magnet")) {
   try {
     const engine = torrentStream("magnet:" + uri, {
-      connections: 5, // Limit the number of connections/streams
+      connections: 7, // Limit the number of connections/streams
     });
 
     const res = await new Promise((resolve, reject) => {
@@ -327,11 +327,11 @@ function getMeta(id, type) {
 
 app.get("/manifest.json", (req, res) => {
   const manifest = {
-    id: "mikmc.od.org",
+    id: "kn.torr.org",
     version: "1.0.1",
-    name: "Bitsearch",
-    description: "Movie & TV Streams from Jackett",
-    logo: "https://bitsearch.to/bitsearch-logo.svg",
+    name: "Knaben Database",
+    description: "Movie & TV Torrentts from Knaben Database",
+    logo: "https://prnt.sc/R3Va2eJigV12",
     resources: ["stream"],
     types: ["movie", "series"],
     idPrefixes: ["tt"],
