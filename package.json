@@ -1,7 +1,7 @@
 {
   "name": "Bitsearch",
   "version": "1.0.1",
-  "description": "stremio jackett",
+  "description": "stremio bitsearch",
   "main": "index.js",
   "repository": "https://github.com/mikmcdanbyeee55/bitsearch.git",
   "scripts": {
@@ -24,6 +24,7 @@
     "fast-xml-parser": "^4.2.7",
     "node-fetch": "^2.6.12",
     "parse-torrent": "^9.1.5",
-    "torrent-stream": "^1.2.1"
+    "torrent-stream": "^1.2.1",
+    "p-limit": "^2.3.0"
   }
 }
