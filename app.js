@@ -217,8 +217,8 @@ const host1 = {
 };
 
 const host2 = {
-  hostUrl: "http://206.189.27.179:9117",
-  apiKey: "8pngmdxpel62ejnekdf3h1rpq4pcm7t6",
+  hostUrl: "http://100.12.26.164:9117",
+  apiKey: "b3f8f3fb4rtt4vcsml7cz82dtkjbj3df",
 };
 
 const fetchTorrentFromHost1 = async (query) => {
