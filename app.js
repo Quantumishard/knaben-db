@@ -212,8 +212,8 @@ let stream_results = [];
 let torrent_results = [];
 
 const host1 = {
-  hostUrl: "http://129.153.72.60:9117",
-  apiKey: "k7lsbawbs4aq8t1s56c58jm091gm7mk7",
+  hostUrl: "http://81.0.219.102:9117",
+  apiKey: "cmj23dexby9u04d3531mm03iikfxgbkr",
 };
 
 const host2 = {
@@ -223,7 +223,7 @@ const host2 = {
 
 const fetchTorrentFromHost1 = async (query) => {
   const { hostUrl, apiKey } = host1;
-  const url = `${hostUrl}/api/v2.0/indexers/all/results?apikey=${apiKey}&Query=${query}&Category[]=2000&Category[]=5000&Category[]=8000&Category[]=10001&Category[]=10003&Category[]=10010&Tracker[]=bulltorrent`;
+  const url = `${hostUrl}/api/v2.0/indexers/all/results?apikey=${apiKey}&Query=${query}&Category%5B%5D=8000&Tracker%5B%5D=mvgroupforum&Tracker%5B%5D=mvgroupmain`;
 
   try {
     const response = await fetch(url, {
@@ -232,7 +232,7 @@ const fetchTorrentFromHost1 = async (query) => {
         "accept-language": "en-US,en;q=0.9",
         "x-requested-with": "XMLHttpRequest",
         cookie:
-          "Jackett=CfDJ8J25OAO9Sl1PgyS8nCYpiI_HC8uozOP1ZyWXaHdVODlFEeJZJ_Zp3CrWfBmvrd-ledO7mLvBot2roIlE8ScCa4BNExYb3QiigvY-De4wMMMY_YUdlwlmaPdRGTA47SPD-mXgIJwMdl8VqGdvuYc-XPuBZQcTtHNUJHstxzd0VijK_2_Qh3ejbKlI5XJa5DDkouw5iMhN4JYdMW1Nd6CGoFhurx0dlxr5RnCT1W5X9EACFpzn93WHwrqxupD5vETpubBXtiqLfXfWTPhQpZrR2pVdUvgXzVC-M1l2DDzrvwdWjCOy0o6VLGoKS38L9RMeCxlXdJoSpOPBkosZmm6hucI",
+          "Jackett=CfDJ8HP8067qbltBhRjGgbPRVDdaKWzrsM6C5svHO9U2nsmpw_Zc5Z5_U0qeH1Cec8ue0evNAtm2AtGvt2u-b6-NWCGJpVDkXJuwIk1q4AOhr6KW5zc4ekB0dSmc_qrsJJcOeHiIvlyz-l-S8m-V8r7qPiDemc0pHbtO2CO-UlOR5pet-jGWnVGSlVLclt6XxqTjqaz2r60Sr8Qo9ETKcZ4FS4HLwYjcQuM2q4UEXbM8Jo0prlQCqWazpyeciepwhLCLs9OLayav19hrd31XWm7KUZG4J1MJAbAfiq-TzLXlVE5svg6LodvEYVSGODI0z9DJSYWtjS2xjxayWc6guKtqVYU",
       },
       referrerPolicy: "no-referrer",
       method: "GET",
