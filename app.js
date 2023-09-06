@@ -223,7 +223,7 @@ const host2 = {
 
 const fetchTorrentFromHost1 = async (query) => {
   const { hostUrl, apiKey } = host1;
-  const url = `${hostUrl}/api/v2.0/indexers/all/results?apikey=${apiKey}&Query=${query}&Category%5B%5D=2000&Category%5B%5D=5000&Category%5B%5D=5050&Category%5B%5D=5080&Category%5B%5D=8000&Tracker%5B%5D=torrentdownloads&Tracker%5B%5D=torrentz2nz`;
+  const url = `${hostUrl}/api/v2.0/indexers/all/results?apikey=${apiKey}&Query=${query}&Category%5B%5D=2000&Category%5B%5D=5000&Category%5B%5D=5050&Category%5B%5D=5080&Category%5B%5D=8000&Tracker%5B%5D=torrentdownloads`;
 
   try {
     const response = await fetch(url, {
