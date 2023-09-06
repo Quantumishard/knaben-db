@@ -223,7 +223,7 @@ const host2 = {
 
 const fetchTorrentFromHost1 = async (query) => {
   const { hostUrl, apiKey } = host1;
-  const url = `${hostUrl}/api/v2.0/indexers/all/results?apikey=${apiKey}&Query=${query}&Category%5B%5D=2000&Category%5B%5D=5000&Category%5B%5D=8000&Tracker%5B%5D=solidtorrents`;
+  const url = `${hostUrl}/api/v2.0/indexers/all/results?apikey=${apiKey}&Query=${query}&Category%5B%5D=2000&Category%5B%5D=5000&Category%5B%5D=8000&Tracker%5B%5D=torrentscsv&Tracker%5B%5D=solidtorrents`;
 
   try {
     const response = await fetch(url, {
@@ -268,7 +268,7 @@ const fetchTorrentFromHost1 = async (query) => {
 
   const fetchTorrentFromHost2 = async (query) => {
   const { hostUrl, apiKey } = host2;
-  const url = `${hostUrl}/api/v2.0/indexers/all/results?apikey=${apiKey}&Query=${query}&Category%5B%5D=2000&Category%5B%5D=2020&Category%5B%5D=2030&Category%5B%5D=2040&Category%5B%5D=2070&Category%5B%5D=5000&Category%5B%5D=5050&Category%5B%5D=5080&Category%5B%5D=8000&Tracker%5B%5D=nntt`;
+  const url = `${hostUrl}/api/v2.0/indexers/all/results?apikey=${apiKey}&Query=${query}&Category%5B%5D=2000&Category%5B%5D=5000&Category%5B%5D=8000&Category%5B%5D=102144&Category%5B%5D=112696&Category%5B%5D=138096&Category%5B%5D=155376&Tracker%5B%5D=yourbittorrent`;
 
   try {
     const response = await fetch(url, {
