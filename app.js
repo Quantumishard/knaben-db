@@ -6,7 +6,7 @@ const torrentStream = require("torrent-stream");
 const bodyParser = require("body-parser");
 const pLimit = require('p-limit');
 const http = require("http");
-const limit = pLimit(7);
+const limit = pLimit(10);
 
 function getSize(size) {
   const gb = 1024 * 1024 * 1024;
@@ -36,7 +36,7 @@ const toStream = async (parsed, uri, tor, type, s, e) => {
 if (!parsed.files && uri.startsWith("magnet")) {
   try {
     const engine = torrentStream("magnet:" + uri, {
-      connections: 5, // Limit the number of connections/streams
+      connections: 3, // Limit the number of connections/streams
     });
 
     const res = await new Promise((resolve, reject) => {
@@ -46,7 +46,7 @@ if (!parsed.files && uri.startsWith("magnet")) {
 
       setTimeout(() => {
         resolve([]);
-      }, 3000); // Timeout if the server is too slow
+      }, 5000); // Timeout if the server is too slow
     });
 
     parsed.files = res;
@@ -110,7 +110,7 @@ const isRedirect = async (url) => {
   return new Promise((resolve, reject) => {
     const timeoutId = setTimeout(() => {
       reject(new Error("Request timeout"));
-    }, 3000); // 5-second timeout
+    }, 5000); // 5-second timeout
 
     const urlObject = new URL(url);
     
