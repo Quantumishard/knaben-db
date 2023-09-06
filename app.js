@@ -212,8 +212,8 @@ let stream_results = [];
 let torrent_results = [];
 
 const host1 = {
-  hostUrl: "http://94.61.74.253:9117",
-  apiKey: "e71yh2n0fopfnyk2j2ywzjfa3sz4xv8d",
+  hostUrl: "http://129.153.72.60:9117",
+  apiKey: "k7lsbawbs4aq8t1s56c58jm091gm7mk7",
 };
 
 const host2 = {
@@ -232,7 +232,7 @@ const fetchTorrentFromHost1 = async (query) => {
         "accept-language": "en-US,en;q=0.9",
         "x-requested-with": "XMLHttpRequest",
         cookie:
-          "Jackett=CfDJ8JGMKzAOIg1GpbGxjar2TujvQ1tVmIta0XThcBG4V_j32mQnx6z3GDTiqYsDLv0jLvfan6JOfx_Mr61hId8KLu389GzmDM6RDqq6yN7K3-ucA7FSricYvgWGmNnVq5xL7cdQfNVIvv78fhRG0Z7lw_Yjz47ZPY9ChVi2ppvE9NFr8dMUg_-fto8XEFEy29ZI6bsxX4KWYoEP-S_zUhhymLf54VJSQKCAvo7d0ZLzWh9p_08kEGaGxyTA8tZYhbolyjKEBoGno80BawzJq2jog8ThKhmtN45rAQdb1CrOkT9dl0S8e0M0_ivZJj-_YeLWOtRn9ygYhiAFhZkIRTJXXbw",
+          "Jackett=CfDJ8J25OAO9Sl1PgyS8nCYpiI_HC8uozOP1ZyWXaHdVODlFEeJZJ_Zp3CrWfBmvrd-ledO7mLvBot2roIlE8ScCa4BNExYb3QiigvY-De4wMMMY_YUdlwlmaPdRGTA47SPD-mXgIJwMdl8VqGdvuYc-XPuBZQcTtHNUJHstxzd0VijK_2_Qh3ejbKlI5XJa5DDkouw5iMhN4JYdMW1Nd6CGoFhurx0dlxr5RnCT1W5X9EACFpzn93WHwrqxupD5vETpubBXtiqLfXfWTPhQpZrR2pVdUvgXzVC-M1l2DDzrvwdWjCOy0o6VLGoKS38L9RMeCxlXdJoSpOPBkosZmm6hucI",
       },
       referrerPolicy: "no-referrer",
       method: "GET",
