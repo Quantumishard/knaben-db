@@ -6,7 +6,7 @@ const torrentStream = require("torrent-stream");
 const bodyParser = require("body-parser");
 const pLimit = require('p-limit');
 const http = require("http");
-const limit = pLimit(7);
+const limit = pLimit(10);
 
 function getSize(size) {
   const gb = 1024 * 1024 * 1024;
@@ -223,7 +223,7 @@ const host2 = {
 
 const fetchTorrentFromHost1 = async (query) => {
   const { hostUrl, apiKey } = host1;
-  const url = `${hostUrl}/api/v2.0/indexers/all/results?apikey=${apiKey}&Query=${query}&Category%5B%5D=2000&Category%5B%5D=5000&Category%5B%5D=8000&Tracker%5B%5D=torrentscsv&Tracker%5B%5D=solidtorrents`;
+  const url = `${hostUrl}/api/v2.0/indexers/all/results?apikey=${apiKey}&Query=${query}&Category%5B%5D=2000&Category%5B%5D=5000&Category%5B%5D=8000&Tracker%5B%5D=solidtorrents`;
 
   try {
     const response = await fetch(url, {
@@ -268,7 +268,7 @@ const fetchTorrentFromHost1 = async (query) => {
 
   const fetchTorrentFromHost2 = async (query) => {
   const { hostUrl, apiKey } = host2;
-  const url = `${hostUrl}/api/v2.0/indexers/all/results?apikey=${apiKey}&Query=${query}&Category%5B%5D=2000&Category%5B%5D=5000&Category%5B%5D=8000&Tracker%5B%5D=bitru&Tracker%5B%5D=yourbittorrent`;
+  const url = `${hostUrl}/api/v2.0/indexers/all/results?apikey=${apiKey}&Query=${query}&Category%5B%5D=2000&Category%5B%5D=5000&Category%5B%5D=8000&Tracker%5B%5D=torrentscsv`;
 
   try {
     const response = await fetch(url, {
