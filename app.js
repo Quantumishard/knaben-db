@@ -6,7 +6,7 @@ const torrentStream = require("torrent-stream");
 const bodyParser = require("body-parser");
 const pLimit = require('p-limit');
 const http = require("http");
-const limit = pLimit(15);
+const limit = pLimit(1);
 
 function getSize(size) {
   const gb = 1024 * 1024 * 1024;
@@ -36,7 +36,7 @@ const toStream = async (parsed, uri, tor, type, s, e) => {
 if (!parsed.files && uri.startsWith("magnet")) {
   try {
     const engine = torrentStream("magnet:" + uri, {
-      connections: 3, // Limit the number of connections/streams
+      connections: 5, // Limit the number of connections/streams
     });
 
     const res = await new Promise((resolve, reject) => {
