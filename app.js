@@ -46,7 +46,7 @@ if (!parsed.files && uri.startsWith("magnet")) {
 
       setTimeout(() => {
         resolve([]);
-      }, 5000); // Timeout if the server is too slow
+      }, 3000); // Timeout if the server is too slow
     });
 
     parsed.files = res;
@@ -110,7 +110,7 @@ const isRedirect = async (url) => {
   return new Promise((resolve, reject) => {
     const timeoutId = setTimeout(() => {
       reject(new Error("Request timeout"));
-    }, 5000); // 5-second timeout
+    }, 3000); // 5-second timeout
 
     const urlObject = new URL(url);
     
